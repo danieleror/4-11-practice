@@ -25,7 +25,7 @@ int main() {
     //closes the file
     file.close();
     //creates input file
-    ifstream input("numbers.html");
+    ifstream input("numbers.html")
     //prints something from the file
     cout << input.rdbuf();
     //closes file
