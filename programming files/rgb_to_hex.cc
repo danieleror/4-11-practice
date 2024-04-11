@@ -10,7 +10,7 @@ std::string rgb_to_hex(int r, int g, int b)
 
     std::stringstream ss;
     ss << std::uppercase << std::hex << std::setfill('0')
-       << std::setw(2) << r << std::setw(2) << g << std::setw(2) << b;
+       << std::setw(2) << g << std::setw(2) << r << std::setw(2) << b;
 
     return ss.str();
 }
