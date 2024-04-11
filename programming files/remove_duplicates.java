@@ -6,6 +6,7 @@ public class remove_duplicates {
 
     // given two list of integers remove all duplicates
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
+
         // copy arr into unique arr
         List<Integer> uniqueArr = arr;
         // for each duplicate element in arr add value to uniqueArr 
@@ -18,7 +19,8 @@ public class remove_duplicates {
             }
         }
         // return new array
-        return arr;
+        return uniqueArr;
+
     }
 
     // test removeDuplicates method

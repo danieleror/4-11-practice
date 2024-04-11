@@ -6,7 +6,7 @@ int main() {
     //creates file to write to
     ofstream file;
     //opens the file
-    file.open("numbers.html");
+    file.open("numbers.htm");
     //adds a title and opens the body
     file << "<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n";
     //creates a table
@@ -25,7 +25,7 @@ int main() {
     //closes the file
     file.close();
     //creates input file
-    ifstream input("numbers.html");
+    ifstream input("numbers.html")
     //prints something from the file
     cout << input.rdbuf();
     //closes file
