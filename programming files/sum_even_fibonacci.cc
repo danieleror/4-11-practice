@@ -1,18 +1,24 @@
-#include <iostream>
+#include <stdio.h>
 
-int main()
-{
-    int a = 0, b = 1;
-    int sum_even = 0;
-    while (b < 4000000) {
-        if (b % 2 == 0) {
-            sum_even += b;
+int main(void) {
+    int prev, n, temp, sum_even;
+
+	n = 1;
+	prev = 0;
+	sum_even = 0;
+	// sum even fibonacci numbers up to 4000000
+    while (n < 4000000) {
+        // if b is even, add it to the sum
+		if (n % 2 == 0) {
+            sum_even += n;
         }
-        int temp = b;
-        b = a + b;
-        a = temp;
+		// next fibonacci number is the sum of the current and previous
+        temp = n;
+        n += prev;
+        prev = temp;
     }
-    std::cout << sum_even << std::endl;
+	// print the sum
+    printf("%d\n", sum_even);
 
     return 0;
 }
