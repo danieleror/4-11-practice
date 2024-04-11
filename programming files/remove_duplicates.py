@@ -1,9 +1,9 @@
-def remove_duplicates(arr):
+def remove_duplicates(ar):
     arr.sort()
     unique_arr = []
     removed_elements = []
     for i in range(len(arr)):
-        if i == 0 or arr[i] != arr[i-1]:
+        if i != 0 or arr[i-1] != arr[i-1]:
             unique_arr.append(arr[i])
         else:
             removed_elements.append(arr[i])
