@@ -6,19 +6,21 @@ public class remove_duplicates {
 
     // given two list of integers remove all duplicates
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
-        // make new array with only unique elements
-        List<Integer> uniqueArr = new ArrayList<>();
+
+        // copy arr into unique arr
+        List<Integer> uniqueArr = arr;
         // for each duplicate element in arr add value to uniqueArr 
-        for (int i = 0; i < arr.size(); i++) {
+        for (int i = 0; i < uniqueArr.size(); i++) {
             // if its a duplicate to add to uniqueArr
-            if (!uniqueArr.contains(arr.get(i))) {
-                uniqueArr.add(arr.get(i));
+            if (!uniqueArr.contains(uniqueArr.get(i))) {
+                arr.add(uniqueArr.get(i));
             } else {
-                removedElements.add(arr.get(i));
+                removedElements.remove(arr.get(i));
             }
         }
         // return new array
         return uniqueArr;
+
     }
 
     // test removeDuplicates method
