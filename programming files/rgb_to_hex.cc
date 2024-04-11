@@ -1,16 +1,13 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <stdint.h>
 
-std::string rgb_to_hex(int r, int g, int b)
+// instead of clamping values, use inherent type restrictions
+std::string rgb_to_hex(uint8_t r, uint8_t g, uint8_t b)
 {
-    r = std::max(0, std::min(255, r));
-    g = std::max(0, std::min(255, g));
-    b = std::max(0, std::min(255, b));
-
-    std::stringstream ss;
     ss << std::uppercase << std::hex << std::setfill('0')
-       << std::setw(2) << g << std::setw(2) << r << std::setw(2) << b;
+       << std::setw(2) << r << std::setw(2) << g << std::setw(2) << b;
 
     return ss.str();
 }
